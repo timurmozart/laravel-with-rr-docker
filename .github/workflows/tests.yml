@@ -120,7 +120,7 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
         uses: actions/checkout@v2
 
       - name: Download built docker image
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: docker-image
           path: .artifact
@@ -172,7 +172,7 @@ jobs: # Docs: <https://help.github.com/en/articles/workflow-syntax-for-github-ac
                 redis-server --requirepass redis_password
 
       - name: Download built docker image
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: docker-image
           path: .artifact
